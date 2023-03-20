@@ -1,4 +1,9 @@
+
 let name = prompt("Please enter your name:");
+
+function welcomeCoffee(){
+
+
 let gender = prompt("Please enter your gender :");
 
 while (gender !== "male" && gender !== "female") {
@@ -13,7 +18,9 @@ alert("Welcome, Ms " + name + "!");
 } else {
 alert("Welcome, " + name + "!");
 }
+}
 
+welcomeCoffee();
 let drinkType = prompt("Would you like a hot or cold drink?");
 let drinkName = prompt("What drink would you like to order?");
 
@@ -27,3 +34,5 @@ for (let i = 0; i < userAnswers.length; i++) {
   console.log(userAnswers[i]);}
   
 console.log(name + " ordered a " + drinkType + " " + drinkName + ".");
+
+
