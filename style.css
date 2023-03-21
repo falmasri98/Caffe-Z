@@ -5,7 +5,9 @@
     --bs-white-rgb: 255, 255, 255;
    
 }
-
+#menu{
+color: #cfb7b7;
+}
 /* 
 @media(prefers-reduced-motion: no-preference) {
     :root {
