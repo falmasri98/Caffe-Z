@@ -81,8 +81,6 @@
 // let lidrink =document.createTextNode(`Your drink is ${drinkType} ${drinkName}`);
 // unlist.appendChild(li3);
 // li3.appendChild(lidrink);
-
-
 const form = document.getElementById("myForm");
 
 form.addEventListener("submit", function(event) {
@@ -99,11 +97,19 @@ form.addEventListener("submit", function(event) {
    const drinkName = event.target.elements["drinkName"].value;
   userAnswers.push(drinkName);
 
-  // const drinkType = event.target.elements["drinkType"].value;
-  // userAnswers.push(drinkType);
+//    const drinkType = event.target.elements["drinkType"].value;
+//  userAnswers.push(drinkType);
+// const drinkType = event.target.drink-temp.checked ? event.target.drink-temp.value : "";
+//  userAnswers.push(drinkType);
 
-  const drinkTemp = event.target.elements["drinkTemp"].checked ? "cold" : "hot";
-  userAnswers.push(drinkTemp);
+//     const drinkType1 = event.target.drink-temp2.checked ? event.target.drink-temp2.value: "";
+//  userAnswers.push(drinkType);
+
+  const drinkTemp = event.target.elements["drinkTemp"].checked ? "hot" : "";
+ userAnswers.push(drinkTemp);
+
+ const drinkTemp2 = event.target.elements["drinkTemp2"].checked ? "cold" : "";
+ userAnswers.push(drinkTemp);
 
   console.log(userAnswers);
 
@@ -113,25 +119,87 @@ form.addEventListener("submit", function(event) {
   const ul = document.createElement("ul");
   const li1 = document.createElement("li");
   const li2 = document.createElement("li");
-  // const li3 = document.createElement("li");
+ //  const li3 = document.createElement("li");
+  // const li03 = document.createElement("li");
+
   const li4 = document.createElement("li");
+  const li04 = document.createElement("li");
+
     const li5 = document.createElement("li");
+   // .type.checked ? event.target.type.value
 
 
   li1.textContent = `Username: ${name}`;
   li2.textContent = `Age: ${age}`;
-  // li3.textContent = `Drink Type: ${drinkType}`;
- // li4.textContent = `Drink Type: ${drinkTemp}`;
+ // li3.textContent = `Drink Type: ${drinkType}`;
+ // li03.textContent=`Drink Type: ${drink-temp2}`;
+  li4.textContent = `Drink Type: ${drinkTemp}`  ;
+  li04.textContent = `Drink Type: ${drinkTemp2}`  ;
   li5.textContent = `Drink Name: ${drinkName}`;
+
 
   ul.appendChild(li1);
   ul.appendChild(li2);
   // ul.appendChild(li3);
- // ul.appendChild(li4);
+  ul.appendChild(li4);
+  ul.appendChild(li04);
+
     ul.appendChild(li5);
 
   div.appendChild(ul);
   menu.appendChild(div);
-  form.reset();
 });
+
+
+// const form = document.getElementById("myForm");
+
+// form.addEventListener("submit", function(event) {
+//   event.preventDefault();
+
+//   const userAnswers = [];
+
+//   const name = event.target.elements["username"].value;
+//   userAnswers.push(name);
+
+//   const age = event.target.elements["age"].value;
+//   userAnswers.push(age);
+  
+//    const drinkName = event.target.elements["drinkName"].value;
+//   userAnswers.push(drinkName);
+
+//    const drinkType = event.target.elements["drinkType"].value;
+//    userAnswers.push(drinkType);
+
+//   const drinkTemp = event.target.elements["drinkTemp"].checked ? "cold" : "hot";
+//   userAnswers.push(drinkTemp);
+
+//   console.log(userAnswers);
+
+//   const menu = document.getElementById("menu");
+
+//   const div = document.createElement("div");
+//   const ul = document.createElement("ul");
+//   const li1 = document.createElement("li");
+//   const li2 = document.createElement("li");
+//   // const li3 = document.createElement("li");
+//   const li4 = document.createElement("li");
+//     const li5 = document.createElement("li");
+
+
+//   li1.textContent = `Username: ${name}`;
+//   li2.textContent = `Age: ${age}`;
+//   // li3.textContent = `Drink Type: ${drinkType}`;
+//  li4.textContent = `Drink Type: ${drinkTemp}`;
+//   li5.textContent = `Drink Name: ${drinkName}`;
+
+//   ul.appendChild(li1);
+//   ul.appendChild(li2);
+//   // ul.appendChild(li3);
+//   ul.appendChild(li4);
+//     ul.appendChild(li5);
+
+//   div.appendChild(ul);
+//   menu.appendChild(div);
+//   form.reset();
+// });
 
